@@ -1,0 +1,9 @@
+--1st Problem 
+SELECT * FROM CITY;
+
+--2nd Problem 
+SELECT * FROM CITY WHERE ID = 1661;
+
+--3rd Problem
+SELECT CITY,STATE FROM STATION;
+
