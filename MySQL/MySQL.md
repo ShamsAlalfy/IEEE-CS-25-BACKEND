@@ -85,7 +85,7 @@ An **RDBMS (relational database management system)** is a collection of programs
 
 7. **Versatility:** Takes up any datatype
 
-8. **ACID (atomicity, consistency, isolation, durability) compliant:** Adheres to crucial database properties of atomicity, consistency, isolation, and durability
+8. **ACID compliant:** Adheres to crucial database properties of atomicity, consistency, isolation, and durability
 
 ***RDBMS***
 
