@@ -107,7 +107,7 @@ An **RDBMS (relational database management system)** is a collection of programs
 
 ---
 
-## 6. Naming conventions
+## 6. Naming Conventions
 
 A **naming conventions** is a convention (generally agreed scheme) for naming things. Conventions differ in their intents, which may include to:
 
