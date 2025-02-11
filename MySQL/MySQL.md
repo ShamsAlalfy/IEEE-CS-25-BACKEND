@@ -85,7 +85,7 @@ An **RDBMS (relational database management system)** is a collection of programs
 
 7. **Versatility:** Takes up any datatype
 
-8. **ACID compliant:** Adheres to crucial database properties of atomicity, consistency, isolation, and durability
+8. **ACID (atomicity, consistency, isolation, durability) compliant:** Adheres to crucial database properties of atomicity, consistency, isolation, and durability
 
 ***RDBMS***
 
@@ -107,7 +107,7 @@ An **RDBMS (relational database management system)** is a collection of programs
 
 ---
 
-## 6. Naming Conventions
+## 6. Naming conventions
 
 A **naming conventions** is a convention (generally agreed scheme) for naming things. Conventions differ in their intents, which may include to:
 
@@ -118,4 +118,76 @@ A **naming conventions** is a convention (generally agreed scheme) for naming th
 - Ensure that each name is unique for same scope
 
 [Reference](https://en.wikipedia.org/wiki/Naming_convention)
+
+---
+
+## Primary keys VS Unique keys
+
+**Primay Key** 
+- Uniquely identifies each record in the table.
+- Cannot store NULL values.
+
+**Unique Keys** 
+- Serves as a unique identifier for records when a primary key is absent.
+- Can store a null value, but only one NULL value is allowed. 
+
+[Reference](https://testbook.com/key-differences/difference-between-primary-key-and-unique-key)
+
+---
+
+## MySQL Constraints
+ 
+**SQL constraints** are used to specify rules for the data in a table.
+
+**Constraints** are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, the action is aborted.
+
+**Constraints** can be column level or table level. Column level constraints apply to a column, and table level constraints apply to the whole table.
+
+**Constraints are commonly used in SQL:**
+- `NOT NULL` - Ensures that a column cannot have a NULL value.
+- `UNIQUE` - Ensures that all values in a column are different.
+- `PRIMARY KEY` - A combination of a `NOT NULL` and `UNIQUE`. Uniquely identifies each row in a table.
+- `FOREIGN KEY` - Prevents actions that would destroy links between tables.
+- `CHECK` - Ensures that the values in a column satisfies a specific condition.
+- `DEFAULT` - Sets a default value for a column if no value is specified.
+- `CREATE INDEX` - Used to create and retrieve data from the database very quickly.
+
+[Reference](https://www.w3schools.com/mysql/mysql_constraints.asp)
+
+---
+
+## MySQL Indexing 
+
+The `CREATE INDEX` statement is used to create indexes in tables.
+
+Indexes are used to retrieve data from the database more quickly than otherwise.
+
+**CREATE INDEX Syntax**
+``` MySQL
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+```
+**CREATE UNIQUE INDEX Syntax**
+``` MySQL
+CREATE UNIQUE INDEX index_name
+ON table_name (column1, column2, ...);
+```
+**DROP INDEX Syntax**
+``` MySQL
+ALTER TABLE table_name
+DROP INDEX index_name;
+```
+[Reference](https://www.w3schools.com/mysql/mysql_create_index.asp)
+
+---
+
+## Difference between MySQL and Postgresql
+
+**MySQL** is a relational database management system that lets you store data as tables with rows and columns. It’s a popular system that powers many web applications, dynamic websites, and embedded systems.
+
+**PostgreSQL** is an object-relational database management system that offers more features than MySQL. It gives you more flexibility in data types, scalability, concurrency, and data integrity.
+
+[Reference](https://aws.amazon.com/compare/the-difference-between-mysql-vs-postgresql/)
+
+---
 
