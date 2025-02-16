@@ -121,7 +121,7 @@ A **naming conventions** is a convention (generally agreed scheme) for naming th
 
 ---
 
-## Primary keys VS Unique keys
+## 7. Primary keys VS Unique keys
 
 **Primay Key** 
 - Uniquely identifies each record in the table.
@@ -135,7 +135,7 @@ A **naming conventions** is a convention (generally agreed scheme) for naming th
 
 ---
 
-## MySQL Constraints
+## 8. MySQL Constraints
  
 **SQL constraints** are used to specify rules for the data in a table.
 
@@ -156,7 +156,7 @@ A **naming conventions** is a convention (generally agreed scheme) for naming th
 
 ---
 
-## MySQL Indexing 
+## 9. MySQL Indexing 
 
 The `CREATE INDEX` statement is used to create indexes in tables.
 
@@ -181,7 +181,7 @@ DROP INDEX index_name;
 
 ---
 
-## Difference between MySQL and Postgresql
+## 10. Difference between MySQL and Postgresql
 
 **MySQL** is a relational database management system that lets you store data as tables with rows and columns. It’s a popular system that powers many web applications, dynamic websites, and embedded systems.
 
@@ -190,4 +190,42 @@ DROP INDEX index_name;
 [Reference](https://aws.amazon.com/compare/the-difference-between-mysql-vs-postgresql/)
 
 ---
+
+## 11. Relations (one to one, one to many, many to many).
+
+- **One To One :**  A record in one table is related to one record in another table.
+- **One To Many :** A record in one table is related to many records in another table.
+- **Many To Many :** Multiple records in one table are related to multiple records in another table.
+
+[Reference](https://dzone.com/articles/how-to-handle-a-many-to-many-relationship-in-datab)
+
+---
+
+## 12. Write-Ahead Logging
+
+**Write-Ahead Logging (WAL)** is a standard method for ensuring data integrity.
+
+ A detailed description can be found in most books about transaction processing. 
+ 
+ Briefly, WAL's central concept is that changes to data files must be written only after those changes have been logged, that is, after WAL records describing the changes have been flushed to permanent storage. 
+ 
+ If we follow this procedure, we do not need to flush data pages to disk on every transaction commit, because we know that in the event of a crash we will be able to recover the database using the log: any changes that have not been applied to the data pages can be redone from the WAL records.
+
+ [Reference](https://www.postgresql.org/docs/current/wal-intro.html)
+
+ ---
+
+ ## 13. What are Normalization and Denormalization?
+
+ **Normalization** is used to remove redundant data from the database and to store non-redundant and consistent data into it. It is a process of converting an unnormalized table into a normalized table. Database normalization is an important process because a poorly designed database table is inconsistent and may create issues while performing operations like insertion, deletion, updating, etc.
+
+The process of Normalization involves resolution of database anomalies, elimination of data redundancy, data dependency, isolation of data, and data consistency. Normalization in databases provides a formal framework to analyze the relations based on the key attributes and their functional dependencies. It reduces the requirements of restructuring of tables.
+
+
+**Denormalization** is used to combine multiple table data into one so that it can be queried quickly. It is a process of storing the join of higher normal form relations in the form of base relation that is in a lower normal form. The primary goal of denormalization is to achieve the faster execution of the queries.
+
+In the process of denormalization, the data is integrated into the same database. Denormalization is mainly used where joins are expensive and queries are executed on the table very frequently. However, there is a drawback of denormalization, that is, a small wastage of memory.
+
+[Reference](https://www.tutorialspoint.com/difference-between-normalization-and-denormalization)
+
 
