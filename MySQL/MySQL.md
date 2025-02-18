@@ -228,4 +228,49 @@ In the process of denormalization, the data is integrated into the same database
 
 [Reference](https://www.tutorialspoint.com/difference-between-normalization-and-denormalization)
 
+## Multi-version Concurrency Control
+
+**Multi-Version Concurrency Control** is a technology, utilized to enhance databases by resolving concurrency
+ problems and also data locking by preserving older database versions.
+ 
+  When many tasks attempt to update the same piece of data simultaneously, MVCC causes a conflict and necessitates
+   a retry from one or more of the processes.
+
+[Reference](https://www.geeksforgeeks.org/what-is-multi-version-concurrency-control-mvcc-in-dbms/)
+
+---
+
+## Triggers
+
+**SQL Triggers** are a critical feature in database management systems (DBMS) that provide automatic 
+execution of a set of SQL statements when specific database events, 
+such as `INSERT`, `UPDATE`, or `DELETE` operations, occur. 
+Triggers are commonly used to maintain data integrity, track changes, 
+and enforce business rules automatically, without needing manual input.
+
+A **trigger** is a stored procedure in a database that automatically invokes whenever a special event
+ in the database occurs.
+
+By using SQL triggers, developers can automate tasks, ensure data consistency, 
+and keep accurate records of database activities. 
+
+[Reference](https://www.geeksforgeeks.org/sql-trigger-student-database/)
+
+---
+
+## How Can We Take The Backup Of a Database ?
+
+1. **Logical Backups :** Extracts the database schema and data into a portable file. 
+This file contains the instructions to recreate the database.
+
+2. **Physical Backups :** 
+Copies the actual database files as they exist on the file system. 
+This creates a direct snapshot of the database.
+
+3. **Hybrid Backups :**
+Combines elements of both logical and physical backups. 
+For example, you might take a physical backup of the data files and a logical backup of the schema.
+
+
+
 
