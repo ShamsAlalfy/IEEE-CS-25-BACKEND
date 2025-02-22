@@ -62,7 +62,14 @@ The **hardware** used to run a web server can vary according to the volume of re
 
 A **resource** sent from a web server can be a pre-existing file (static content) available to the web server, or it can be generated at the time of the request (dynamic content) by another program that communicates with the server software. The former usually can be served faster and can be more easily cached for repeated requests, while the latter supports a broader range of applications.
 
+[Reference](https://en.wikipedia.org/wiki/Web_server)
+
+---
 
 # DNS
 
 The **Domain Name System (DNS)** is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.
+
+[Reference](https://www.cloudflare.com/learning/dns/what-is-dns/)
+
+---
