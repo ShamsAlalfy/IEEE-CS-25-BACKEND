@@ -1,0 +1,14 @@
+<?php
+/*
+if 
+else
+echo 
+var 
+class
+function 
+while
+private
+public
+static
+*/
+?>
