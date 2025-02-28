@@ -4,7 +4,12 @@
     $stop = 3;
 
     for($i = $start ; $i >= $end ; $i--){
-        echo "$i<br>";
+        if ($i < 10 ){
+            echo "0$i<br>";
+        }
+        else{
+            echo "$i<br>";
+        }
         if ($i === $stop){
             break;
         }
