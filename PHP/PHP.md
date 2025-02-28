@@ -49,3 +49,79 @@ In **PHP**, variable and constant names are case sensitive, while function names
 - Class Names
 
 [Reference](https://stackoverflow.com/questions/33273941/php-case-sensitivity)
+
+
+--- 
+
+# Programming Language VS. Scripting Language.
+
+| Scripting Language | Programming Language |
+|--------------------|----------------------|
+| A scripting language is a language that uses a naive method to bring codes to a runtime environment. | A Programming language is a language which is used by humans to navigate their communication with computers. |
+| These are made for a particular runtime environment. | Programming languages are of three types: low-level, middle-level, and high-level programming languages. |
+| They are used to create dynamic web applications. | Programming languages are used to write computer programs. |
+| Scripting languages contain different libraries. | They are high-speed languages. |
+| **Examples:** Bash, Ruby, Python, JavaScript, etc. | **Examples:** C++, Java, PHP (High-level), etc. |
+
+
+[Reference](https://www.geeksforgeeks.org/whats-the-difference-between-scripting-and-programming-languages/)
+
+---
+
+# Dynamically Typed VS. Statically Typed Language.
+
+In **statically typed programming languages**, type checking occurs at compile time. 
+At compile time, source code in a specific programming language is converted to a machine-readable format.
+ This means that before source code is compiled, the type associated with each and every single 
+ variable must be known.
+
+ ***Ex:***  Java, Haskell, C, C++, C#, Scala, Kotlin, Fortran, Go, Pascal, and Swift.
+
+ in **dynamically typed languages**, type checking takes place at runtime or execution time.
+  This means that variables are checked against types only when the program is executing. 
+
+  ***Ex:*** Python, JavaScript, Lisp, PHP, Ruby, Perl, Lua, and Tcl.
+
+
+[Reference](https://www.baeldung.com/cs/statically-vs-dynamically-typed-languages)
+
+---
+
+# Assign by Value VS Assign by Reference.
+
+**Assign by Value**
+  - When you assign a value to a variable, a copy of that value is created and stored in the new variable.
+
+  - Changes made to the new variable do not affect the original variable.
+
+  - Each variable has its own independent memory space.
+
+  - Used when you do not want the original value to change.
+
+  ```php
+    $a = 10;
+    $b = $a; // Copying the value of $a
+    $b = 20; // Changing $b does not affect $a
+    echo $a; // Output: 10
+   ```
+
+**Assign by Reference**
+
+  - Instead of copying the value, the new variable refers to the same memory location as the original variable.
+
+  - Changes made to one variable affect the other.
+
+  - Both variables share the same value in memory.
+
+  - Used when you want to update the original value through another variable.
+
+```php
+    $a = 10;
+    $b = &$a; // Assigning by reference
+    $b = 20; // Changing $b also changes $a
+    echo $a; // Output: 20
+```
+
+[Reference](https://www.php.net/manual/en/language.operators.assignment.php)
+
+---
