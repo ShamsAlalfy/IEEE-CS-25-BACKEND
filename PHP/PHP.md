@@ -125,3 +125,50 @@ At compile time, source code in a specific programming language is converted to 
 [Reference](https://www.php.net/manual/en/language.operators.assignment.php)
 
 ---
+
+# What is the Difference Between for and foreach Loop in PHP?
+
+```for Loop``` 
+
+The ***for*** loop works at the end of the given condition. It is used for the implementation of variables and works in a single way. The for loop does not work in the case of associative arrays. A for loop basically consists of three portions or parts. 
+
+```php
+
+<?php
+ 
+// Declaring an array
+$arr = array(1, 2, 3, 4, 5);
+ 
+// Looping over array
+for($i = 0; $i < 5; $i++) {
+ 
+// Accessing individual elements
+    echo($arr[$i] . "  ");
+}
+ 
+?>
+```
+
+```foreach Loop```
+
+The ***foreach*** loop works at the end of the array count. This loop can work with variables as well as associative arrays. Therefore, this loop can be implemented in more than one way. The foreach loop is much better and performs better in comparison to the for loop. 
+
+```php
+
+<?php
+ 
+// Declaring an array
+$arr = [1, 2, 3, 4, 5];
+ 
+// Looping over array
+foreach ($arr as $val) {
+    // Accessing individual elements
+    echo $val . "  ";
+}
+ 
+?>
+```
+
+[Reference](https://www.geeksforgeeks.org/what-is-the-difference-between-for-and-foreach-loop-in-php/)
+
+---
