@@ -172,3 +172,33 @@ foreach ($arr as $val) {
 [Reference](https://www.geeksforgeeks.org/what-is-the-difference-between-for-and-foreach-loop-in-php/)
 
 ---
+
+# Sessions vs. Cookies.
+**Cookies** are small pieces of data stored in the user’s browser. They help remember things like login status or preferences even after closing the website.
+**Sessions** store user data on the server, making them more secure and ideal for storing temporary or sensitive information.
+
+[Reference](https://www.geeksforgeeks.org/difference-between-session-and-cookies/)
+
+---
+
+# Error Handling in PHP.
+
+When creating scripts and web applications, error handling is an important part. If your code lacks error checking code, your program may look very unprofessional and you may be open to security risks.
+
+**Some different error handling methods:**
+
+- Simple "die()" statements
+- Custom errors and error triggers
+- Error reporting
+
+[Reference](https://www.w3schools.com/PHP/php_error.asp)
+
+---
+
+# How PHP Executes Code.
+
+- PHP code execution involves four stages: Lexing, Parsing, Compilation, and Interpretation. Each stage is crucial in the process of converting PHP source code into machine-readable code.
+- Lexing, or tokenizing, is the process of turning a string (PHP source code) into a sequence of tokens. Each token is a named identifier for the value it has matched.  This stage also stores the lexeme and the line number of the matched token.
+- The Parsing stage verifies the validity of the token order and generates the abstract syntax tree (AST). The AST is a tree view of the source code used during the Compilation stage.
+- The Compilation stage emits opcodes by traversing the AST and performs optimizations like resolving function calls with literal arguments and folding constant mathematical expressions. The output of this stage can be inspected using OPcache, VLD, and PHPDBG.
+- The Interpretation stage is the final stage where the opcodes are run on the Zend Engine (ZE) VM. The output of this stage is what your PHP script outputs via commands such as echo, print, var_dump, etc.
