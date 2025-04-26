@@ -19,7 +19,7 @@
 	- Controller `app/controllers/` performs specific actions and sends data to a View.
 	- View `app/views/` formats the data appropriately, providing the HTTP Response.
 
-[Reference]([Laravel Request Lifecycle. This blog is to help you get to know… | by Ankita Tejani | Medium](https://medium.com/@ankitatejani84/laravel-request-lifecycle-7c2145aa1257))
+[Reference](https://medium.com/@ankitatejani84/laravel-request-lifecycle-7c2145aa1257)
 
 ---
 # Routing in Laravel
@@ -45,7 +45,7 @@ Route::get('/', function() {
 ```
 
 
-[Reference]([Laravel | Routing Basics | GeeksforGeeks](https://www.geeksforgeeks.org/laravel-routing-basics/))
+[Reference](https://www.geeksforgeeks.org/laravel-routing-basics/)
 
 ---
 
@@ -79,3 +79,5 @@ Route::get('/', function() {
 
 - No real difference in practice.
 - You can test helper functions the same way you test facades.
+
+[Reference](https://laravel.com/docs/11.x/facades)
