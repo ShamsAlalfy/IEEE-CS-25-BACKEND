@@ -135,7 +135,7 @@ Use `@foreach` , `@for` , `@while` for Loops.
 ```
 
 
-[Reference]([Laravel Blade Template Engine: A Beginner's Guide - DEV Community](https://dev.to/icornea/laravel-blade-template-engine-a-beginners-guide-54bi#:~:text=Blade%20is%20Laravel%E2%80%99s%20built-in%20template%20engine%20that%20allows,making%20development%20much%20more%20efficient.%20Why%20Use%20Blade%3F))
+[Reference](https://dev.to/icornea/laravel-blade-template-engine-a-beginners-guide-54bi#:~:text=Blade%20is%20Laravel%E2%80%99s%20built-in%20template%20engine%20that%20allows,making%20development%20much%20more%20efficient.%20Why%20Use%20Blade%3F)
 
 ---
 
@@ -145,6 +145,6 @@ Use `@foreach` , `@for` , `@while` for Loops.
 
 **ORM** is critical in data interaction simplification, code optimization, and smooth blending of applications and databases.
 
-[Reference]([What is Object-Relational Mapping (ORM) in DBMS? | GeeksforGeeks](https://www.geeksforgeeks.org/what-is-object-relational-mapping-orm-in-dbms/))
+[Reference](https://www.geeksforgeeks.org/what-is-object-relational-mapping-orm-in-dbms/)
 
 ---
