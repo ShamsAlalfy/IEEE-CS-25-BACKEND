@@ -81,3 +81,70 @@ Route::get('/', function() {
 - You can test helper functions the same way you test facades.
 
 [Reference](https://laravel.com/docs/11.x/facades)
+
+
+---
+
+# Blade Templates and How it works 
+
+## What is Blade in Laravel?
+
+***Blade*** is Laravel’s built-in template engine that allows developers to write dynamic HTML with embedded PHP in a more readable and maintainable way.
+
+Unlike traditional PHP templates, ***Blade*** provides template inheritance and reusable components, making development much more efficient.
+
+
+## Why Use Blade?
+
+- Cleaner Syntax
+- Template Inheritance
+- Reusable Components
+- Security Features
+
+## Common Blade Directives 
+
+### Echo Data
+
+Use `{{ }}` to display variables.
+
+```php
+<p> {{ $name }} </p>
+```
+
+
+### Blade Conditionals
+
+Use `@if` , `@elseif` , `@else` for conditionals.
+
+```php
+@if($age >= 18)
+	<p> Adult! </p>
+@else
+	<p> Minor! </p>
+@endif
+```
+
+### Blade Loops
+
+Use `@foreach` , `@for` , `@while` for Loops.
+
+```php
+@foreach($users as $user)
+	<p>{{ $user->name }} </p>
+@endforeach
+```
+
+
+[Reference]([Laravel Blade Template Engine: A Beginner's Guide - DEV Community](https://dev.to/icornea/laravel-blade-template-engine-a-beginners-guide-54bi#:~:text=Blade%20is%20Laravel%E2%80%99s%20built-in%20template%20engine%20that%20allows,making%20development%20much%20more%20efficient.%20Why%20Use%20Blade%3F))
+
+---
+
+# What is ORM and Why it is useful ?
+
+**Object-relational mapping (ORM)** is a key concept in the field of **Database Management Systems (DBMS)**, addressing the bridge between the object-oriented programming approach and relational databases.
+
+**ORM** is critical in data interaction simplification, code optimization, and smooth blending of applications and databases.
+
+[Reference]([What is Object-Relational Mapping (ORM) in DBMS? | GeeksforGeeks](https://www.geeksforgeeks.org/what-is-object-relational-mapping-orm-in-dbms/))
+
+---
