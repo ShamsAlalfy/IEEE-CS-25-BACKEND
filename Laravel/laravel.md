@@ -135,7 +135,7 @@ Use `@foreach` , `@for` , `@while` for Loops.
 ```
 
 
-[Reference](https://dev.to/icornea/laravel-blade-template-engine-a-beginners-guide-54bi#:~:text=Blade%20is%20Laravel%E2%80%99s%20built-in%20template%20engine%20that%20allows,making%20development%20much%20more%20efficient.%20Why%20Use%20Blade%3F)
+[Reference]([Laravel Blade Template Engine: A Beginner's Guide - DEV Community](https://dev.to/icornea/laravel-blade-template-engine-a-beginners-guide-54bi#:~:text=Blade%20is%20Laravel%E2%80%99s%20built-in%20template%20engine%20that%20allows,making%20development%20much%20more%20efficient.%20Why%20Use%20Blade%3F))
 
 ---
 
@@ -145,6 +145,138 @@ Use `@foreach` , `@for` , `@while` for Loops.
 
 **ORM** is critical in data interaction simplification, code optimization, and smooth blending of applications and databases.
 
-[Reference](https://www.geeksforgeeks.org/what-is-object-relational-mapping-orm-in-dbms/)
+[Reference]([What is Object-Relational Mapping (ORM) in DBMS? | GeeksforGeeks](https://www.geeksforgeeks.org/what-is-object-relational-mapping-orm-in-dbms/))
+
+---
+
+# Defining relationships in Eloquent models
+
+To have relationships between database tables, first you still need to take care of database **fields** and **foreign keys**. Usually, in database migration statement.
+
+```php
+Schema::table('posts', function (Blueprint $table) {
+    $table->integer('user_id')->unsigned();
+    $table->foreign('user_id')->references('id')->on('users');
+});
+```
+
+we also may specify the behavior for the **delete** and **update** actions on related tables by : 
+
+- **CASCADE:** - deletes/updates child entry along with the parent entry
+- **RESTRICT**: throws error and doesn’t delete/updates parent entry
+- **SET NULL**: deletes parent entry and sets child foreign key entry to NULL
+
+
+## ONE TO ONE Relationship
+
+### hasOne Function
+ 
+```php
+class User extends Model
+{
+    function profile() {
+        return $this->hasOne('App\UserProfile');
+    }
+}
+```
+
+we have **hasOne()** method with only one parameter – related model’s class name with namespace.
+
+Laravel automatically “knows” that there is a relationship on main table’s **id** field and related table’s **user_id** – it is formed by main table’s name, putting it to singular and adding **_id**.
+
+### belongsTo Function
+
+```php
+class UserProfile extends Model
+{
+    function user() {
+        return $this->belongsTo('App\User');
+    }
+}
+```
+
+we may also have a relationship from **UserProfile** to **User** model, a _reverse_ from hasOne. This one is called **belongsTo**.
+
+## One-to-Many Relationships
+
+It is used when entry in one database table can have **many** related entries in another table.
+
+we will use the same **belongsTo**, which we already know from one-to-one relationship.
+
+```php
+class Book extends Model
+{
+    function author() {
+        return $this->belongsTo('App\Author');
+    }
+}
+```
+
+### hasMany function
+
+Inverted function of a **belongsTo()** is called **hasMany()** and is defined in the parent’s model.
+
+In our case, **Author** model would look like this:
+
+```php
+class Author extends Model
+{
+    function books() {
+        return $this->hasMany('App\Book');
+    }
+}
+```
+
+
+[Reference](https://blog.quickadminpanel.com/eloquent-relationships-the-ultimate-guide/)
+
+---
+
+# Attaching, syncing, detaching related records
+
+
+## Attaching
+
+The `attach` method is primarily used in many-to-many relationships to add records to the pivot table that connects two models.
+
+```php
+$role = Role::find(1);  
+$user->roles()->attach($role->id);
+```
+
+## Syncing
+
+The `sync` method is a powerful way to synchronize the records in a many-to-many relationship. It takes an array of related model IDs as its argument and ensures that the pivot table contains only those records.
+
+```php
+$roleIds = [1, 2, 3];  
+$user->roles()->sync($roleIds);
+```
+
+## 
+
+the `detach` method allows we to remove records from a many-to-many relationship's pivot table.
+
+```php
+$role = Role::find(1);  
+$user->roles()->detach($role->id);
+```
+
+[Reference](https://medium.com/@rajvir.ahmed.shuvo/understanding-sync-attach-and-detach-in-laravel-managing-relationships-with-eloquent-394a7cf7fabd)
+
+---
+
+# The N+1 Problem In Laravel
+
+The N+1 query problem occurs when an application makes one initial query to the database followed by an additional query for each result obtained from the first query. This typically happens in object-relational mapping (ORM) frameworks when dealing with relationships between models.
+
+```php
+$posts = Post::all();
+foreach ($posts as $post) {
+    $comments = $post->comments; // Additional query for each post
+}
+```
+
+[Reference](https://loadforge.com/guides/optimizing-laravel-applications-by-detecting-n1-queries)
 
 ---
