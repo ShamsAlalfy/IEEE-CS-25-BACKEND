@@ -280,3 +280,34 @@ foreach ($posts as $post) {
 [Reference](https://loadforge.com/guides/optimizing-laravel-applications-by-detecting-n1-queries)
 
 ---
+
+# What is the XSRF or CSRF ... is there a difference between them??
+
+**CSRF (or XSRF)** is the same vulnerability — it tricks a logged-in user into performing unintended actions on a web app. For example, clicking a malicious link could transfer money or change account settings without the user knowing. "X" just stands for "cross," like in XSS (Cross-Site Scripting).
+
+No difference between them.
+
+[Reference](https://laravel.com/docs/12.x/csrf)
+
+---
+# What is Livewire?
+
+- Livewire is a full-stack framework that simplifies the creation of dynamic interfaces in Laravel using primarily PHP and Blade, with minimal JavaScript.
+
+- Livewire is a library that allows us to build reactive and dynamic interfaces using Blade and a little bit of JavaScript. I say “a little” because we’re only going to write JavaScript to pass data around via browser events and responding to them.
+
+[Reference](https://www.sitepoint.com/laravel-livewire-getting-started/)
+
+---
+
+# 5 packages that are most use
+
+1. *Laravel Debugbar:*  Adds a developer toolbar for debugging purposes.
+2. *Eloquent-Sluggable:* Generates SEO-friendly slugs for models.
+3. *Migrations Generator:* Automates generating migration files based on database schema.
+4. *Laravel Backup:* Creates backups of your application files and database.
+5. *Laravel Mix:* Asset compilation tool built on top of Webpack.
+
+[Reference](https://www.cloudways.com/blog/best-laravel-packages/)
+
+---
