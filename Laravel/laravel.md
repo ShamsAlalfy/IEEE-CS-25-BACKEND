@@ -311,3 +311,94 @@ No difference between them.
 [Reference](https://www.cloudways.com/blog/best-laravel-packages/)
 
 ---
+
+# Laravel Gates
+
+Gates are simply closures that determine if a user is authorized to perform a given action. Typically, gates are defined within the `boot` method of the `App\Providers\AppServiceProvider` class using the `Gate` facade. Gates always receive a user instance as their first argument and may optionally receive additional arguments such as a relevant Eloquent model.
+
+```php
+use App\Models\Post;
+use App\Models\User;
+use Illuminate\Support\Facades\Gate;
+
+
+public function boot(): void
+{
+    Gate::define('update-post', function (User $user, Post $post) {
+        return $user->id === $post->user_id;
+    });
+}
+```
+
+[Reference](https://laravel.com/docs/12.x/authorization)
+
+---
+
+# Sanctum vs Passport
+
+## Laravel Passport
+
+Laravel Passport provides a full OAuth2 server implementation for Laravel application. It allows for complex authentication flows, enabling the creation of secure APIs that adhere to the OAuth2 specification. This makes Passport suitable for applications requiring third-party integrations or complex authorization scenarios.
+
+### Features
+
+- **Full OAuth2 Support**
+- **Access Tokens**
+- **Personal Access Tokens**
+- **Token Revocation**
+- **Scopes**
+
+## Laravel Sanctum
+
+Laravel Sanctum is a simpler authentication solution designed for single-page applications (SPAs) and lightweight APIs. It is particularly useful for projects that require basic token authentication without the complexities of OAuth2.
+
+
+### Features
+
+- **API Tokens**
+- **Session-Based Authentication**
+- **CSRF Protection**
+- **Multiple Token Types**
+- **Lightweight Implementation**
+
+[Reference](https://bmehul.com/articles/laravel-passport-vs-sanctum-a-comprehensive-comparison)
+
+---
+
+# Guard vs Middleware
+
+## Middleware: The Request Filters
+
+**Middleware** in Laravel functions as a filter for HTTP requests entering application.
+**Middleware** can inspect and modify requests before they reach your controllers, and even modify responses before they are sent back to the client.
+
+### Why do we use middleware ?
+
+- **Authentication**
+- **Logging**
+- **CORS Handling**
+- **Maintenance Mode**
+
+### When do we use middleware ?
+
+- Apply a filter or rule to all incoming requests or specific route groups.
+- Perform global tasks like authentication checks, input validation, or request logging.
+- Handle pre- and post-processing of HTTP requests.
+
+
+
+## Guards: The Authentication Gatekeepers
+
+**Guards** are a fundamental part of Laravel’s authentication system. They define how users are authenticated for each request. Laravel supports several types of guards, such as `session` and `token` guards. **Guards** use drivers to authenticate users, whether through sessions or API tokens.
+
+
+## When do we use guards ?
+
+- Define different authentication mechanisms for different parts of your application.
+- Separate web-based session authentication from API token-based authentication.
+- Customize user providers to support various models or data sources for user credentials.
+
+[Reference](https://medium.com/@kesen.somar.99/understanding-middleware-guards-and-gates-in-laravel-e2084cabc945)
+
+---
+
