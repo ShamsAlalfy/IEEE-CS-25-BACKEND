@@ -1,0 +1,11 @@
+#btns {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#btns > button {
+  width: 100%;
+  height: 48px;
+  font-size: 24px;
+}
